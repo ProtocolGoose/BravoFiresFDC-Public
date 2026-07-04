@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "application": "Bravo Fires FDC",
+  "update_channel": "beta",
+  "latest_beta": "v3.0.5-beta",
+  "latest_stable": "v3.0.5-beta",
+  "minimum_supported": "v3.0.0-beta",
+  "required": false,
+  "release_title": "Bravo Fires FDC v3.0.5 Beta",
+  "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta",
+  "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta",
+  "changelog_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/CHANGELOG.md",
+  "eula_url": "https://docs.google.com/document/d/1O5138qMW55mkR-I7GH4-uhajQKlGnTtPGfH1uVvLUko/edit?usp=sharing",
+  "privacy_url": "https://docs.google.com/document/d/1pSEcPeTZI6Zj37UngS5YnY17-lKwd8ywlSi1f7pFohk/edit?usp=sharing",
+  "terms_url": "https://docs.google.com/document/d/114uWecdznbvZxOsLGkLFWk-UxoIXdAZ_z0ak6yxQIpk/edit?usp=sharing",
+  "manifest_url": "https://raw.githubusercontent.com/ProtocolGoose/BravoFiresFDC-Public/main/update_manifest.json",
+  "published_at": "2026-07-04",
+  "summary": "v3.0.5-beta points the update checker at the public BravoFiresFDC-Public release channel, adds official Google Docs legal document links, and requires one-time EULA acceptance before first use. Calculation and layout behavior are unchanged from v2.1.3-beta.",
+  "notes": [
+    "Changed the online update manifest path to ProtocolGoose/BravoFiresFDC-Public on the main branch.",
+    "Updated EULA, Terms of Service, and Privacy Policy URLs to the official Google Docs links.",
+    "Added a one-time EULA acceptance gate before the main app opens.",
+    "If the EULA is declined, the app closes.",
+    "Acceptance is stored locally per user and can be required again if the legal agreement ID changes.",
+    "Preserved the v3.0.4 update troubleshooting UI.",
+    "No calculation or layout behavior changed."
+  ],
+  "channels": {
+    "beta": {
+      "version": "v3.0.5-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta"
+    },
+    "stable": {
+      "version": "v3.0.5-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.5-beta"
+    }
+  },
+  "legal_agreement_id": "bravo-fires-fdc-google-docs-legal-v1",
+  "legal_documents": {
+    "eula": "https://docs.google.com/document/d/1O5138qMW55mkR-I7GH4-uhajQKlGnTtPGfH1uVvLUko/edit?usp=sharing",
+    "terms_of_service": "https://docs.google.com/document/d/114uWecdznbvZxOsLGkLFWk-UxoIXdAZ_z0ak6yxQIpk/edit?usp=sharing",
+    "privacy_policy": "https://docs.google.com/document/d/1pSEcPeTZI6Zj37UngS5YnY17-lKwd8ywlSi1f7pFohk/edit?usp=sharing"
+  }
+}
