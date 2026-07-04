@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "application": "Bravo Fires FDC",
+  "update_channel": "beta",
+  "latest_beta": "v3.0.6-beta",
+  "latest_stable": "v3.0.6-beta",
+  "minimum_supported": "v3.0.0-beta",
+  "required": false,
+  "release_title": "Bravo Fires FDC v3.0.6 Beta",
+  "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+  "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+  "changelog_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/CHANGELOG.md",
+  "eula_url": "https://docs.google.com/document/d/1O5138qMW55mkR-I7GH4-uhajQKlGnTtPGfH1uVvLUko/edit?usp=sharing",
+  "privacy_url": "https://docs.google.com/document/d/1pSEcPeTZI6Zj37UngS5YnY17-lKwd8ywlSi1f7pFohk/edit?usp=sharing",
+  "terms_url": "https://docs.google.com/document/d/114uWecdznbvZxOsLGkLFWk-UxoIXdAZ_z0ak6yxQIpk/edit?usp=sharing",
+  "manifest_url": "https://raw.githubusercontent.com/ProtocolGoose/BravoFiresFDC-Public/main/update_manifest.json",
+  "published_at": "2026-07-04",
+  "summary": "v3.0.6-beta reorganizes the project into clean source, asset, data, legal, and documentation folders, removes the old alpha launcher batch file, and updates the Windows build script to work from the new structure and clean up the downloaded package ZIP when found. Calculation and layout behavior are unchanged from v3.0.5-beta.",
+  "notes": [
+    "Reorganized the private/source package into src, assets, data, legal, and docs folders.",
+    "Kept only labeled folders, build_windows_exe.bat, CHANGELOG.md, and .gitignore at the repo root.",
+    "Removed run_bravo_fires_fdc.bat because it was a carryover from Alpha builds.",
+    "Updated resource loading so the app can find packaged files from the new folder layout.",
+    "Updated build_windows_exe.bat for the structured layout.",
+    "Added package ZIP cleanup at the end of the Windows build script when the downloaded ZIP is found beside the repo or in the parent folder.",
+    "No calculation or layout behavior changed."
+  ],
+  "channels": {
+    "beta": {
+      "version": "v3.0.6-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta"
+    },
+    "stable": {
+      "version": "v3.0.6-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta"
+    }
+  },
+  "legal_agreement_id": "bravo-fires-fdc-google-docs-legal-v1",
+  "legal_documents": {
+    "eula": "https://docs.google.com/document/d/1O5138qMW55mkR-I7GH4-uhajQKlGnTtPGfH1uVvLUko/edit?usp=sharing",
+    "terms_of_service": "https://docs.google.com/document/d/114uWecdznbvZxOsLGkLFWk-UxoIXdAZ_z0ak6yxQIpk/edit?usp=sharing",
+    "privacy_policy": "https://docs.google.com/document/d/1pSEcPeTZI6Zj37UngS5YnY17-lKwd8ywlSi1f7pFohk/edit?usp=sharing"
+  }
+}
