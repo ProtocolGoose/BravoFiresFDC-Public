@@ -2,35 +2,37 @@
   "schema_version": 1,
   "application": "Bravo Fires FDC",
   "update_channel": "beta",
-  "latest_beta": "v3.0.4-beta",
-  "latest_stable": "v3.0.4-beta",
+  "latest_beta": "v3.0.6-beta",
+  "latest_stable": "v3.0.6-beta",
   "minimum_supported": "v3.0.0-beta",
   "required": false,
-  "release_title": "Bravo Fires FDC v3.0.4 Beta",
-  "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
-  "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
+  "release_title": "Bravo Fires FDC v3.0.6 Beta",
+  "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+  "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
   "changelog_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/CHANGELOG.md",
-  "eula_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/EULA.md",
-  "privacy_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/PRIVACY_POLICY.md",
-  "terms_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/TERMS_OF_SERVICE.md",
+  "eula_url": "https://docs.google.com/document/d/1O5138qMW55mkR-I7GH4-uhajQKlGnTtPGfH1uVvLUko/edit?usp=sharing",
+  "privacy_url": "https://docs.google.com/document/d/1pSEcPeTZI6Zj37UngS5YnY17-lKwd8ywlSi1f7pFohk/edit?usp=sharing",
+  "terms_url": "https://docs.google.com/document/d/114uWecdznbvZxOsLGkLFWk-UxoIXdAZ_z0ak6yxQIpk/edit?usp=sharing",
   "published_at": "2026-07-04",
-  "summary": "v3.0.4-beta adds manifest URL troubleshooting to the update checker. Calculation and layout behavior are unchanged from v2.1.3-beta.",
+  "summary": "v3.0.6-beta reorganizes the project into clean source, asset, data, legal, and documentation folders. It also removes the old Alpha-era run batch file and updates the Windows build script cleanup behavior. Calculation and layout behavior are unchanged.",
   "notes": [
-    "Added expected online manifest URL display to the Update Check unavailable window.",
-    "Added Open Manifest URL and Copy Manifest URL(s) troubleshooting actions.",
-    "Preserved the v3.0.3 Windows build script fix.",
+    "Reorganized project files into src, assets, data, legal, and docs folders.",
+    "Removed run_bravo_fires_fdc.bat because it was an Alpha-era carryover.",
+    "Updated the Windows build script to build from the new src folder.",
+    "Updated the Windows build script to include assets, data, legal files, and CHANGELOG.md.",
+    "Added build-script cleanup for the downloaded v3.0.6 ZIP when found in the repo folder or parent folder.",
     "No calculation or layout behavior changed."
   ],
   "channels": {
     "beta": {
-      "version": "v3.0.4-beta",
-      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
-      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta"
+      "version": "v3.0.6-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta"
     },
     "stable": {
-      "version": "v3.0.4-beta",
-      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
-      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta"
+      "version": "v3.0.6-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.6-beta"
     }
   }
 }
