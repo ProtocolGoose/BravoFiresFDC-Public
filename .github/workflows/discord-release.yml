@@ -1,0 +1,102 @@
+name: Discord Public Release Announcement
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Manual test title"
+        required: false
+        default: "Bravo Fires FDC test announcement"
+      body:
+        description: "Manual test body"
+        required: false
+        default: "This is a manual Discord webhook test from GitHub Actions."
+
+permissions:
+  contents: read
+
+jobs:
+  announce-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send public release announcement to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_PUBLIC_RELEASE_WEBHOOK_URL }}
+          EVENT_NAME: ${{ github.event_name }}
+          REPOSITORY: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          RELEASE_NAME: ${{ github.event.release.name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_URL: ${{ github.event.release.html_url }}
+          RELEASE_BODY: ${{ github.event.release.body }}
+          MANUAL_TITLE: ${{ inputs.title }}
+          MANUAL_BODY: ${{ inputs.body }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.request
+          import urllib.error
+
+          webhook = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+          if not webhook:
+              print("Missing repository secret: DISCORD_PUBLIC_RELEASE_WEBHOOK_URL")
+              sys.exit(1)
+
+          event_name = os.environ.get("EVENT_NAME", "")
+          repo = os.environ.get("REPOSITORY", "")
+          actor = os.environ.get("ACTOR", "")
+
+          if event_name == "release":
+              release_name = os.environ.get("RELEASE_NAME") or os.environ.get("RELEASE_TAG") or "New Bravo Fires FDC Release"
+              release_tag = os.environ.get("RELEASE_TAG") or "Unknown tag"
+              release_url = os.environ.get("RELEASE_URL") or "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases"
+              release_body = os.environ.get("RELEASE_BODY") or "A new Bravo Fires FDC public release has been published."
+              title = f"Bravo Fires FDC Release: {release_name}"
+              description = release_body[:3800]
+              fields = [
+                  {"name": "Tag", "value": release_tag, "inline": True},
+                  {"name": "Repository", "value": repo, "inline": True},
+                  {"name": "Published by", "value": actor, "inline": True},
+              ]
+          else:
+              title = os.environ.get("MANUAL_TITLE") or "Bravo Fires FDC test announcement"
+              description = os.environ.get("MANUAL_BODY") or "Manual Discord webhook test from GitHub Actions."
+              release_url = "https://github.com/ProtocolGoose/BravoFiresFDC-Public"
+              fields = [
+                  {"name": "Repository", "value": repo, "inline": True},
+                  {"name": "Triggered by", "value": actor, "inline": True},
+              ]
+
+          payload = {
+              "username": "Bravo Fires Release Bot",
+              "embeds": [
+                  {
+                      "title": title,
+                      "url": release_url,
+                      "description": description,
+                      "color": 5814783,
+                      "fields": fields,
+                      "footer": {"text": "Bravo Fires FDC Public Release Channel"},
+                  }
+              ],
+          }
+
+          data = json.dumps(payload).encode("utf-8")
+          req = urllib.request.Request(
+              webhook,
+              data=data,
+              headers={"Content-Type": "application/json"},
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=20) as resp:
+                  print(f"Discord response: {resp.status}")
+          except urllib.error.HTTPError as exc:
+              print(f"Discord webhook failed: HTTP {exc.code}")
+              print(exc.read().decode("utf-8", errors="replace"))
+              sys.exit(1)
+          PY
