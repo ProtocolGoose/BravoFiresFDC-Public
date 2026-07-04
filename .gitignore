@@ -1,0 +1,19 @@
+# Temporary local files
+*.tmp
+*.bak
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Do not commit private source code here
+*.py
+*.spec
+__pycache__/
+build/
+dist/
+.venv/
+venv/
+.idea/
+.vscode/

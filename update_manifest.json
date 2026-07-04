@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "application": "Bravo Fires FDC",
+  "update_channel": "beta",
+  "latest_beta": "v3.0.4-beta",
+  "latest_stable": "v3.0.4-beta",
+  "minimum_supported": "v3.0.0-beta",
+  "required": false,
+  "release_title": "Bravo Fires FDC v3.0.4 Beta",
+  "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
+  "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
+  "changelog_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/CHANGELOG.md",
+  "eula_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/EULA.md",
+  "privacy_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/PRIVACY_POLICY.md",
+  "terms_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/blob/main/TERMS_OF_SERVICE.md",
+  "published_at": "2026-07-04",
+  "summary": "v3.0.4-beta adds manifest URL troubleshooting to the update checker. Calculation and layout behavior are unchanged from v2.1.3-beta.",
+  "notes": [
+    "Added expected online manifest URL display to the Update Check unavailable window.",
+    "Added Open Manifest URL and Copy Manifest URL(s) troubleshooting actions.",
+    "Preserved the v3.0.3 Windows build script fix.",
+    "No calculation or layout behavior changed."
+  ],
+  "channels": {
+    "beta": {
+      "version": "v3.0.4-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta"
+    },
+    "stable": {
+      "version": "v3.0.4-beta",
+      "release_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta",
+      "download_url": "https://github.com/ProtocolGoose/BravoFiresFDC-Public/releases/tag/v3.0.4-beta"
+    }
+  }
+}
